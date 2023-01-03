@@ -51,6 +51,15 @@ exports.buildNodesFromResponse = (response) => {
   }
 
   if (isNotEmpty(response.jobs)) {
+     response.jobs.map(job => {
+      job.metadata.map(item => {
+        if(item.name === "Way of Working") {
+          item.listed_value = item.value;
+          delete item.value;
+        }
+      })
+    })
+    
     const jobNodes = response.jobs.map(job => { 
       return JobNode(job)
     })
