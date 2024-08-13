@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: gatsby-source-greenhouse-job-board 
+  annotations:
+    circleci.com/project-slug: github/contentful/gatsby-source-greenhouse-job-board
+    github.com/project-slug: contentful/gatsby-source-greenhouse-job-board 
+    contentful.com/ci-alert-slack: webdeploybot
+spec:
+  type: library
+  lifecycle: production
+  owner: group:team-website
